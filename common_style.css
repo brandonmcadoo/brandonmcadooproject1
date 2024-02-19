@@ -1,0 +1,101 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo{
+    color: white;
+    font-size: 24px;
+
+}
+a{
+   text-decoration: none; 
+   color: white;
+}
+.navInfo{
+    list-style: none;
+    display: flex;
+    margin:10px;
+}
+li{
+    margin:10px;
+}
+.hovli:hover{
+    background-color: grey;
+}
+.link{
+    color:black;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media (min-width: 576px){
+    nav{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navInfo{
+        flex-direction: row;
+        font-size: 16px;
+    }
+}
+
+
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    background-color: lightgray;
+    height: 20vh;
+    flex-grow: 1;
+}
+
+aside{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header, footer{
+    animation-name: fader;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    height: 10vh;
+}
+
+header, footer, article, nav, aside{
+    padding: 1em;
+}
+
+@media (min-width: 576px){
+    main{
+        flex-direction: row;
+    }
+    aside{
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 20vw;
+    }
+
+    @keyframes fader{
+        0%{background-color: #333;}
+        50%{background-color: #555;}
+        100%{background-color: #333;}
+    }
+}
